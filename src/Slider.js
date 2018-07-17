@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import a from '../src/Images/a.jpg';
-import b from '../src/Images/b.jpg';
-import c from '../src/Images/c.jpg';
-import d from '../src/Images/d.jpg';
 
+// this is array with adresses of background pictures
 const imgUrl = [
 
     "/static/media/a.728992e7.jpg",
@@ -11,6 +8,8 @@ const imgUrl = [
     "/static/media/c.4b0927c1.jpg",
     "/static/media/d.b7474da5.jpg"
 ];
+
+// this is function returning div with background image which is slider photo
 
 const ImageSlide = ({ url }) => {
     const styles = {
@@ -24,6 +23,8 @@ const ImageSlide = ({ url }) => {
     );
 };
 
+// this is component of Slider
+
 class Slider extends Component{
     constructor(props) {
         super(props);
@@ -32,6 +33,7 @@ class Slider extends Component{
         }
     };
 
+    // here is function which is changing current index need to change the picture in slideshow
     componentDidMount () {
         let timeID= setInterval( ()=> {
             let current = this.state.currentIndex;
@@ -46,7 +48,6 @@ class Slider extends Component{
     }
 
     render() {
-        console.log({c}, {d});
         return (
             <div className="slider">
                 <ImageSlide url = { imgUrl[this.state.currentIndex] }/>
