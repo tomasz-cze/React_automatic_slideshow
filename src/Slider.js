@@ -5,10 +5,11 @@ import c from '../src/Images/c.jpg';
 import d from '../src/Images/d.jpg';
 
 const imgUrl = [
-    {a},
-    {b},
-    {c},
-    {d}
+
+    "/static/media/a.728992e7.jpg",
+    "/static/media/b.303a5d13.jpg",
+    "/static/media/c.4b0927c1.jpg",
+    "/static/media/d.b7474da5.jpg"
 ];
 
 const ImageSlide = ({ url }) => {
@@ -37,14 +38,15 @@ class Slider extends Component{
             // current = current +1
             current += 1;
             // current = current % 4
-            current %= 3;
+            current %= 4;
             this.setState ({
                 currentIndex: current
             })
-        }, 4000);
+        }, 2000);
     }
 
     render() {
+        console.log({c}, {d});
         return (
             <div className="slider">
                 <ImageSlide url = { imgUrl[this.state.currentIndex] }/>

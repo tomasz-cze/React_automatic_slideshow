@@ -1,0 +1,23 @@
+.container {
+  height: 500px; }
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 40px; }
+
+.slider {
+  padding-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .slider :first-child {
+    color: white;
+    text-align: center;
+    font-size: 40px; }
+  .slider .image-slide {
+    height: 500px;
+    position: absolute;
+    width: 80%;
+    border-radius: 2%; }
